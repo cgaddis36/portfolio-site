@@ -1,0 +1,51 @@
+
+.classification {
+  font-size: 2vh;
+  font-weight: 100;
+}
+.description {
+  font-size: 1.5vh;
+  text-align: center;
+  padding: 3px;
+  /* padding-left: 5px;
+  padding-right: 5px; */
+}
+.frameworks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgb(22, 63, 101);
+  height: 20vh;
+  width: 30vh;
+  background-color: rgb(225, 228, 238);
+  border: 2px solid rgb(10, 110, 110);
+  border-radius: 15px;
+  border: solid 1px #555;
+  background-color: #eed;
+  box-shadow:  0 0 8px  rgb(25, 179, 179);
+  -moz-box-shadow: 0 0 8px  rgb(25, 179, 179);
+  -webkit-box-shadow: 0 0 8px  rgb(25, 179, 179);
+  -o-box-shadow: 0 0 8px  rgb(25, 179, 179);
+  padding: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.project:hover { 
+  cursor: pointer;
+  background-color: aliceblue;
+  box-shadow:  0 0 10px  rgb(25, 179, 179);
+  -moz-box-shadow: 0 0 10px  rgb(25, 179, 179);
+  -webkit-box-shadow: 0 0 10px  rgb(25, 179, 179);
+  -o-box-shadow: 0 0 10px  rgb(25, 179, 179);
+}
+.name {
+  font-size: 2.5vh;
+  font-weight: bold;
+  /* margin-bottom: 5px; */
+}

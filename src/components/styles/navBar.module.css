@@ -1,0 +1,28 @@
+.nav {
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 100vh;
+}
+
+.navButton {
+  width: 20vh;
+  font-size: 2vh;
+  font-weight: bold;
+  color: rgb(128, 127, 125);
+  background-image: linear-gradient(rgb(32, 55, 123), rgb(32, 55, 123), rgb(32, 55, 123), rgb(32, 55, 123), rgb(32, 55, 123), 
+  rgb(128, 127, 125));
+}
+.navButton {
+  cursor: pointer;
+}
+.active {
+  width: 20vh;
+  font-size: 2vh;
+  font-weight: bold;
+  color: rgb(228, 226, 224);
+  background-image: linear-gradient(rgb(32, 55, 123), rgb(32, 55, 123), rgb(32, 55, 123), rgb(32, 55, 123), rgb(32, 55, 123), 
+  rgb(228, 226, 224));
+}
