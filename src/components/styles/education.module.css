@@ -71,6 +71,8 @@
   height: 74vh;
   width: 97vh;
   display: flex;
+  flex-direction: column-reverse;
+
   justify-content: space-around;
   align-items: center;
 }
