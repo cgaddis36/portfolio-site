@@ -1,20 +1,19 @@
 import React from 'react'
 import styles from '../styles/about.module.css'
-import NavBar from '../features/navBar'
+import Header from '../features/header'
 import beachSunset from '../images/beachSunset.png'
 import skiing from '../images/skiChris.png'
 import flyfish from '../images/fly.png'
 import beachBikes from '../images/beachBikes.png'
+import hike from '../images/hike.png'
 
 function About() {
   return(
     <div className={styles.main}>
-      <div className={styles.title}>
-        About Me
-      </div>
-      <NavBar
+      <Header 
         active={'about'}
-        />
+        title={"About Me"}
+        /> 
       <div className={styles.container}>
         <div className={styles.section}>
           <div className={styles.header}>
@@ -47,7 +46,7 @@ function About() {
             Hiking
             <div className={styles.images}>
               <img 
-                src={beachSunset}
+                src={hike}
                 className={styles.hobbyImage}
                 />
             </div>

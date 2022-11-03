@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import FetchProjects from '../apiCalls/fetchProjects'
 import styles from '../styles/splash.module.css'
-import NavBar from '../features/navBar'
 import ProjectBox from '../features/projectBox' 
+import Header from '../features/header'
+import Modal from '../features/modal'
 
 function Splash() {
   const [loading, setLoading] = useState(false)
+  const [modal, setModal] = useState(false)
   const [projects, setProjects] = useState([])
+  const [project, setProject] = useState(0)
+  console.log("project splash", project)
   useEffect(() => {
     FetchProjects({
       setLoading,
@@ -15,12 +19,10 @@ function Splash() {
   }, [])
   return (
     <div className={styles.main}>
-      <div className={styles.title}>
-        Chase's Portfolio
-      </div>
-      <NavBar
+      <Header 
         active={'projects'}
-        />
+        title={"Projects"}
+        /> 
       <div className={styles.container}>
         {
           loading ?
@@ -40,6 +42,7 @@ function Splash() {
           projects.map((project, index) =>
             <ProjectBox
               key={index}
+              index={index}
               name={project.name}
               description={project.description}
               features={project.features}
@@ -49,8 +52,21 @@ function Splash() {
               hosts={project.hosts}
               url={project.url}
               github={project.github}
+              setModal={setModal}
+              setProject={setProject}
             />
           )
+        }
+        {
+          modal ?
+          <Modal 
+            projects={projects}
+            project={project}
+            setModal={setModal}
+            setProject={setProject}
+            />
+            :
+            null
         }
       </div>
 

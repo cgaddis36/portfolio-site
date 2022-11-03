@@ -1,0 +1,153 @@
+@keyframes color {
+  0% { 
+    box-shadow: 0 0 45px #f36cd1; 
+    -moz-box-shadow: 0 0 45px #f36cd1; 
+    -webkit-box-shadow: 0 0 45px #f36cd1; 
+    -o-box-shadow: 0 0 45px #f36cd1; 
+  }
+  20% { 
+    box-shadow: 0 0 45px #87f4f4; 
+    -moz-box-shadow: 0 0 45px #87f4f4; 
+    -webkit-box-shadow: 0 0 45px #87f4f4; 
+    -o-box-shadow: 0 0 45px #87f4f4; 
+  } 
+  40%   { 
+    box-shadow: 0 0 45px #fded6f; 
+    -moz-box-shadow: 0 0 45px #fded6f; 
+    -webkit-box-shadow: 0 0 45px #fded6f; 
+    -o-box-shadow: 0 0 45px #fded6f; 
+  }
+  60%  { 
+    box-shadow: 0 0 45px #f39508; 
+    -moz-box-shadow: 0 0 45px #f39508; 
+    -webkit-box-shadow: 0 0 45px #f39508; 
+    -o-box-shadow: 0 0 45px #f39508; 
+  }
+  80%  { 
+    box-shadow: 0 0 45px #87f4f4; 
+    -moz-box-shadow: 0 0 45px #87f4f4; 
+    -webkit-box-shadow: 0 0 45px #87f4f4; 
+    -o-box-shadow: 0 0 45px #87f4f4; 
+  }
+  100% { 
+    box-shadow: 0 0 45px #f36cd1; 
+    -moz-box-shadow: 0 0 45px #f36cd1; 
+    -webkit-box-shadow: 0 0 45px #f36cd1; 
+    -o-box-shadow: 0 0 45px #f36cd1; 
+  }
+ }
+.api {
+  text-align: left;
+  margin-left: 5vh;
+}
+.api:before{
+  content: "- "
+}
+
+.apis {
+  margin-bottom: 1vh;
+ }
+ .feature {
+  text-align: left;
+  margin-left: 5vh;
+}
+.feature:before{
+  content: "- "
+}
+
+.features {
+  margin-bottom: 1vh;
+ }
+.bullet {
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+.description {
+  text-align: left;
+  margin-left: 5vh;
+  margin-bottom: 1vh;
+  margin-right: 5vh;
+}
+.framework{
+  font-weight: bold;
+}
+
+.frameworks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header {
+  margin-bottom: 1vh;
+  font-size: 3vh;
+  margin-left: 5vh;
+  font-weight: bold;
+  display: flex;
+}
+.host {
+  text-align: left;
+  margin-left: 5vh;
+}
+.host:before{
+  content: "- "
+}
+
+.hosts {
+  margin-bottom: 1vh;
+ }
+.name {
+  font-weight: bold;
+  font-size: 5vh;
+
+}
+.name:hover {
+  cursor: pointer;
+}
+.github {
+  font-weight: bold;
+  font-size: 3vh;
+  width: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.github:hover {
+  cursor: pointer;
+}
+.modal {
+  position: absolute;
+  color: rgb(22, 63, 101);
+  padding: 2vh;
+  height: fit-content;
+  width: 93vh;
+  background-color: #eed;
+  animation: color 9s infinite;
+  border-radius: 20px;
+  box-shadow:  0 0 8px  rgb(25, 179, 179);
+  -moz-box-shadow: 0 0 8px  rgb(25, 179, 179);
+  -webkit-box-shadow: 0 0 8px  rgb(25, 179, 179);
+  -o-box-shadow: 0 0 8px  rgb(25, 179, 179);  
+  opacity: .97;
+}
+
+
+.xIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-self: flex-start;
+  align-items: flex-start;
+  justify-items: flex-start;
+  height: 5vh;
+  width: 15vh;
+}
+.xIcon:hover {
+  cursor: pointer;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
