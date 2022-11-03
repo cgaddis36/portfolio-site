@@ -1,8 +1,26 @@
+.header {
+  font-size: 5vh;
+  text-align: left;
+  margin-left: 2vh;
+  color: rgb(32, 55, 123);
+  font-weight: bolder;
+
+}
+
+.body {
+  background-color: #eed;
+  text-align: left;
+  border: 5px double rgb(32, 55, 123);
+  border-radius: 15px;
+  padding: 1vh;
+  margin: 1vh;
+}
+
 .container {
   border: 5px double rgb(10, 110, 110);
   border-radius: 20px;
   margin-top: 3vh;
-  background-color: rgb(58, 60, 61);
+  background-color: rgb(224, 240, 253);
   height: 75vh;
   width: 98vh;
   display: flex;
@@ -29,4 +47,28 @@
   font-weight: bolder;
   margin-top: 1vh;
   margin-bottom: 1vh;
+}
+.hobby {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: 1vh;
+  margin-left: 1vh;
+  font-weight: bold;
+  color: rgb(32, 55, 123);
+}
+.hobbyImage {
+  height: 15vh;
+  width: 20vh;
+  border-radius: 20px;
+}
+.hobbies {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+
+}
+
+.section {
+  text-align: left;
+  width: 95vh;
 }
