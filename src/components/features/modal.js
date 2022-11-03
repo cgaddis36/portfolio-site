@@ -12,7 +12,9 @@ function Modal({
     setProject(pro)
   }
   const navigatePath = () => {
-    window.open(activeProject.url)
+    console.log("URL Path", activeProject.url)
+
+    window.open(activeProject.url, '_blank', 'noopener,noreferrer')
   }
   const githubShow = () => {
     if(activeProject.github === activeProject.url) {
@@ -23,7 +25,8 @@ function Modal({
   }
   const show = githubShow()
   const githubNav = () => {
-    window.open(activeProject.github)
+    console.log("Github", activeProject.github)
+    window.open(activeProject.github, '_blank', 'noopener,noreferrer')
   }
   return (
     <div className={styles.modal}>
