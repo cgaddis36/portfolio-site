@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import FetchProjects from '../apiCalls/fetchProjects'
 import styles from '../styles/splash.module.css'
-import NavBar from '../features/navBar'
 import ProjectBox from '../features/projectBox' 
-
+import Header from '../features/header'
 function Splash() {
   const [loading, setLoading] = useState(false)
   const [projects, setProjects] = useState([])
@@ -15,12 +14,10 @@ function Splash() {
   }, [])
   return (
     <div className={styles.main}>
-      <div className={styles.title}>
-        Chase's Portfolio
-      </div>
-      <NavBar
+      <Header 
         active={'projects'}
-        />
+        title={"Projects"}
+        /> 
       <div className={styles.container}>
         {
           loading ?

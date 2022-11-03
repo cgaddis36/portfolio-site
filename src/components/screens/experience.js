@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/experience.module.css'
-import NavBar from '../features/navBar'
+import Header from '../features/header'
 import JobBox from '../features/jobBox'
 import FetchJobs from '../apiCalls/fetchJobs'
 function Experience() {
@@ -15,12 +15,10 @@ function Experience() {
   }, [])
   return(
     <div className={styles.main}>
-      <div className={styles.title}>
-        Chase's Experience
-      </div>
-      <NavBar
+      <Header 
         active={'experience'}
-        />
+        title={"Experience"}
+        /> 
       <div className={styles.container}>
         {
           loading ?

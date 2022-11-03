@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/education.module.css'
-import NavBar from '../features/navBar'
+import Header from '../features/header'
 import ugaLogo from '../images/ugaLogo.png'
 import turingLogo from '../images/turingLogo.png'
 import InstitutionBox from '../features/institutionBox'
@@ -24,12 +24,10 @@ function Education() {
   }, [])
   return(
     <div className={styles.main}>
-      <div className={styles.title}>
-        Chase's Education
-      </div>
-      <NavBar
-        active={'education'}
-        />
+        <Header 
+          active={'education'}
+          title={"Education"}
+          /> 
       <div className={styles.container}>
         <div className={styles.eduBoxes}>
           { loading ?
