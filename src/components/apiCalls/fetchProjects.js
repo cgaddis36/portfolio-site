@@ -34,8 +34,9 @@ export default function FetchProjects({
     }
   })
   .then((data) => {
-    console.log("Projects Data", data["data"])
-    var projectsData = data["data"]["projects"]
+    var data1 = data["data"] 
+    console.log("Projects Data", data1)
+    var projectsData = data1["projects"]
     setProjects(projectsData)
     setLoading(false)
     return projectsData
