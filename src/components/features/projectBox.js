@@ -2,13 +2,24 @@ import React from 'react'
 import styles from '../styles/projectBox.module.css'
 
 function ProjectBox({
+  index,
   name,
   frameworks,
   classification,
-  description
+  description,
+  setModal,
+  setProject
 }) {
+  console.log("key", index)
+  const modalSetter = () => {
+    setProject(index)
+    setModal(true)
+  }
   return (
-    <div className={styles.project}>
+    <div 
+      className={styles.project}
+      onClick={modalSetter}
+      >
       <div className={styles.name}>
         {name}
         <div className={styles.classification}>
