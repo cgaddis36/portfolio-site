@@ -9,7 +9,7 @@ function Experience() {
         Chase's Experience
       </div>
       <NavBar
-        active={'education'}
+        active={'experience'}
         />
       <div className={styles.container}>
 

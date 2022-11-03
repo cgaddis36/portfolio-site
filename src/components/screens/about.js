@@ -9,7 +9,7 @@ function About() {
         About Chase
       </div>
       <NavBar
-        active={'About'}
+        active={'about'}
         />
       <div className={styles.container}>
 
