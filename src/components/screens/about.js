@@ -5,6 +5,7 @@ import beachSunset from '../images/beachSunset.png'
 import skiing from '../images/skiChris.png'
 import flyfish from '../images/fly.png'
 import beachBikes from '../images/beachBikes.png'
+import hike from '../images/hike.png'
 
 function About() {
   return(
@@ -47,7 +48,7 @@ function About() {
             Hiking
             <div className={styles.images}>
               <img 
-                src={beachSunset}
+                src={hike}
                 className={styles.hobbyImage}
                 />
             </div>
