@@ -1,5 +1,5 @@
-export default function FetchProjects({
-  setProjects,
+export default function FetchJobs({
+  setJobs,
   setLoading
 }) {
   setLoading(true)
@@ -11,16 +11,15 @@ export default function FetchProjects({
     body: JSON.stringify({
       query:
         `query {
-          projects{
-            name 
-            description
-            url 
-            github
-            features
-            frameworks
-            apis
-            hosts
-            classification
+          jobs{
+            title
+            industry 
+            company 
+            city
+            state
+            summary
+            startDate
+            endDate
           }}`,
      }),
   }, [])
@@ -35,10 +34,10 @@ export default function FetchProjects({
   })
   .then((data) => {
     var data1 = data["data"] 
-    console.log("Projects Data", data1)
-    var projectsData = data1["projects"]
-    setProjects(projectsData)
+    console.log("Jobs Data", data1)
+    var jobsData = data1["jobs"]
+    setJobs(jobsData)
     setLoading(false)
-    return projectsData
+    return jobsData
   })
 }

@@ -1,5 +1,5 @@
-export default function FetchProjects({
-  setProjects,
+export default function FetchInstitutions({
+  setInstitutions,
   setLoading
 }) {
   setLoading(true)
@@ -11,16 +11,13 @@ export default function FetchProjects({
     body: JSON.stringify({
       query:
         `query {
-          projects{
+          institutions{
             name 
-            description
-            url 
-            github
-            features
-            frameworks
-            apis
-            hosts
-            classification
+            degree
+            major 
+            city
+            state
+            graduation
           }}`,
      }),
   }, [])
@@ -35,10 +32,11 @@ export default function FetchProjects({
   })
   .then((data) => {
     var data1 = data["data"] 
-    console.log("Projects Data", data1)
-    var projectsData = data1["projects"]
-    setProjects(projectsData)
+    console.log("institutions Data", data1)
+    var institutionsData = data1["institutions"]
+    setInstitutions(institutionsData)
     setLoading(false)
-    return projectsData
+    return institutionsData
   })
 }
+
