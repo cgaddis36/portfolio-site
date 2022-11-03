@@ -3,7 +3,7 @@ export default function FetchProjects({
   setLoading
 }) {
   setLoading(true)
-  return fetch('http://localhost:4000/graphql', {
+  return fetch('https://portfolio.chasegaddis.com/graphql', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
