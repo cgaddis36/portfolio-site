@@ -22,8 +22,16 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-}
+  position: relative;
 
+}
+.modal {
+  position: absolute;
+  height: 55vh;
+  width: 71.86vh;
+  background-color: blanchedalmond;
+  opacity: .2;
+}
 .loading {
   display: flex;
   flex-direction: row;
