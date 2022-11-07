@@ -1,19 +1,92 @@
+@keyframes color {
+  0% { 
+    border-color: #f36cd1; 
+    color: #87f4f4; 
+    
+  }
+  20% { 
+    border-color: #87f4f4; 
+    color: #f36cd1; 
+
+  } 
+  40%   { 
+    border-color:#fded6f; 
+    
+    color:#f39508; 
+  }
+  60%  { 
+    border-color:#f39508; 
+    color:#fded6f; 
+
+  }
+  80%  { 
+    border-color:#87f4f4; 
+    color:#f36cd1; 
+    
+  }
+  100% { 
+    border-color:#f36cd1; 
+    color:#87f4f4; 
+
+  }
+ }
+
+ @keyframes color2 {
+  0% { 
+    color: #f36cd1; 
+    border-color: #87f4f4; 
+    
+  }
+  20% { 
+    color: #87f4f4; 
+    border-color: #f36cd1; 
+
+  } 
+  40%   { 
+    color:#fded6f; 
+    border-color:#f39508; 
+  }
+  60%  { 
+    color:#f39508; 
+    border-color:#fded6f; 
+
+  }
+  80%  { 
+    color:#87f4f4; 
+    border-color:#f36cd1; 
+    
+  }
+  100% { 
+    color:#f36cd1; 
+    border-color:#87f4f4; 
+
+  }
+ }
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .header {
   font-size: 5vh;
   text-align: left;
   margin-left: 2vh;
-  color: rgb(32, 55, 123);
+  color: rgb(223, 226, 235);
   font-weight: bolder;
+  position: relative;
 
 }
 
 .body {
-  background-color: #eed;
+  background-color: rgb(251, 251, 241);
   text-align: left;
   border: 5px double rgb(32, 55, 123);
   border-radius: 15px;
   padding: 1vh;
   margin: 1vh;
+  position: relative;
+
 }
 
 .container {
@@ -27,6 +100,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .main {
@@ -47,28 +121,82 @@
   font-weight: bolder;
   margin-top: 1vh;
   margin-bottom: 1vh;
+  
 }
 .hobby {
-  display: flex;
-  flex-direction: column-reverse;
   margin-right: 1vh;
   margin-left: 1vh;
+  font-size: 5vh;
   font-weight: bold;
-  color: rgb(32, 55, 123);
+  text-align: left;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(225, 228, 238);
 }
+
 .hobbyImage {
-  height: 15vh;
-  width: 20vh;
+  height: 35vh;
+  width: 40vh;
   border-radius: 20px;
+  margin-right: 3vh;
+  margin-top: 1vh;
 }
 .hobbies {
   display: flex;
   flex-direction: row;
-  overflow: scroll;
+  position: relative;
+  width: 98vh;
+
+}
+.nextButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vh;
+}
+.overlay {
+  height: 75vh;
+  width: 98vh;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 15px;
+  background-color: rgba(7, 22, 65, 0.3);
+}
+.section {
+  text-align: center;
+  width: 95vh;
+}
+.video {
+  height: 75vh;
+  width: 98vh;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 15px;
 
 }
 
-.section {
-  text-align: left;
-  width: 95vh;
+.activeArrow {
+  color: #fff;
+  font-size: 3vh;
+  border: 1px solid #f36cd1;
+  border-radius: 10px;
+  padding: 1vh;
+  border-color: #f36cd1;
+
+  animation: color 7s infinite;
+}
+.activeArrow:hover {
+  cursor: pointer;
+  border: 5px solid #f36cd1;
+  animation: color 3s infinite;
+  font-weight: bold;
+}
+
+.inactiveArrow {
+  color: rgb(183, 176, 176);
+  font-size: 3vh;
+  border: 1px solid #f36cd1;
+  border-radius: 10px;
+  padding: 1vh;
+  border-color: #7c7f80;
+  pointer-events: none;
 }
