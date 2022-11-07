@@ -11,10 +11,10 @@ function NavBar({
   return (
   <div className={styles.nav}>
     <div 
-      onClick={() => swapPath('/')} 
-      className={active === 'projects' ? styles.active : styles.navButton}
+      onClick={() => swapPath('/about')} 
+      className={active === 'about' ? styles.active : styles.navButton}
       >
-      Projects
+      About Me
     </div>
      <div
       onClick={() => swapPath('/education')} 
@@ -29,10 +29,10 @@ function NavBar({
       Experience
     </div>
     <div 
-      onClick={() => swapPath('/about')} 
-      className={active === 'about' ? styles.active : styles.navButton}
+      onClick={() => swapPath('/')} 
+      className={active === 'projects' ? styles.active : styles.navButton}
       >
-      About Me
+      Projects
     </div>
   </div>
   )

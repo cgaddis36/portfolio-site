@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import FetchProjects from '../apiCalls/fetchProjects'
-import styles from '../styles/splash.module.css'
+import styles from '../styles/projects.module.css'
 import ProjectBox from '../features/projectBox' 
 import Header from '../features/header'
 import Modal from '../features/modal'
 
-function Splash() {
+function Projects() {
   const [loading, setLoading] = useState(false)
   const [modal, setModal] = useState(false)
   const [projects, setProjects] = useState([])
   const [project, setProject] = useState(0)
-  console.log("project splash", project)
+  console.log("project Projects", project)
   useEffect(() => {
     FetchProjects({
       setLoading,
@@ -73,4 +73,4 @@ function Splash() {
     </div>
   )
 }
-export default Splash
+export default Projects
