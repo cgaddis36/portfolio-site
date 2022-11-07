@@ -76,14 +76,12 @@ function About() {
               </div>
               <div className={styles.nextButtons}>
                <div 
-                  src={leftArrow}
                   onClick={() => backHobby()}
                   className={checkArrow('left') ? styles.activeArrow : styles.inactiveArrow}
                   > 
                   Last Hobby
                   </div>
                 <div 
-                  src={rightArrow}
                   onClick={() => nextHobby()}
                   className={checkArrow('right') ? styles.activeArrow : styles.inactiveArrow}
                   >
