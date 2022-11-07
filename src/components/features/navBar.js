@@ -11,7 +11,7 @@ function NavBar({
   return (
   <div className={styles.nav}>
     <div 
-      onClick={() => swapPath('/about')} 
+      onClick={() => swapPath('/')} 
       className={active === 'about' ? styles.active : styles.navButton}
       >
       About Me
@@ -29,7 +29,7 @@ function NavBar({
       Experience
     </div>
     <div 
-      onClick={() => swapPath('/')} 
+      onClick={() => swapPath('/projects')} 
       className={active === 'projects' ? styles.active : styles.navButton}
       >
       Projects
