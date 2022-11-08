@@ -67,7 +67,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100vh;
 }
+
 .header {
   font-size: 5vh;
   text-align: left;
@@ -75,7 +77,6 @@
   color: rgb(223, 226, 235);
   font-weight: bolder;
   position: relative;
-
 }
 
 .body {
@@ -86,7 +87,7 @@
   padding: 1vh;
   margin: 1vh;
   position: relative;
-
+  opacity: .8;
 }
 
 .container {
@@ -101,6 +102,7 @@
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  
 }
 
 .main {
@@ -134,24 +136,25 @@
 }
 
 .hobbyImage {
-  height: 35vh;
-  width: 40vh;
+  height: 25vh;
+  width: 30vh;
   border-radius: 20px;
   margin-right: 3vh;
   margin-top: 1vh;
+  opacity: .8;
 }
 .hobbies {
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 98vh;
+  /* width: 110vh; */
 
 }
 .nextButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 50vh;
+  width: 60vh;
 }
 .overlay {
   height: 75vh;
