@@ -12,14 +12,13 @@ import DiveVid from '../videos/diving.mp4'
 import BikeVid from '../videos/biking.mp4'
 import HikeVid from '../videos/hiking.mp4'
 
-
 function About() {
   const hobbies = [
-    {name: 'Fly Fishing', image: flyfish, video: FlyVid},
-    {name: 'Hiking', image: hike, video: HikeVid},
-    {name: 'Skiing', image: skiing, video: SkiVid},
-    {name: 'Diving', image: beachSunset, video: DiveVid},
-    {name: 'Biking', image: beachBikes, video: BikeVid},
+    {name: 'Fly Fishing', image: flyfish, video: "https://fishing-video.s3.amazonaws.com/beachFlyFish.mp4"},
+    {name: 'Hiking', image: hike, video: "https://hiking-video.s3.amazonaws.com/hiking.mp4"},
+    {name: 'Skiing', image: skiing, video: "https://skiing-video.s3.amazonaws.com/1+(1).mp4"},
+    {name: 'Diving', image: beachSunset, video: "https://diving-video.s3.amazonaws.com/diving.mp4"},
+    {name: 'Biking', image: beachBikes, video: "https://biking-video.s3.amazonaws.com/biking.mp4"},
   ]
   const [activeHobby, setActiveHobby] = useState(0)
   const hobby = hobbies[activeHobby]
@@ -44,7 +43,7 @@ function About() {
         title={"About Me"}
         /> 
       <div className={styles.container}>
-        <video src={activeVideo} autoPlay muted loop className={styles.video}/>
+        <video src={activeVideo} autoPlay loop muted className={styles.video} />
         <div className={styles.overlay}></div>
         <div className={styles.section}>
           <div className={styles.header}>
