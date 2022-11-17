@@ -1,40 +1,25 @@
 import React, { useState } from 'react'
 import styles from '../styles/about.module.css'
 import Header from '../features/header'
-import beachSunset from '../images/beachSunset.png'
-import skiing from '../images/skiChris.png'
-import flyfish from '../images/fly.png'
-import beachBikes from '../images/beachBikes.png'
-import hike from '../images/hike.png'
-import FlyVid from '../videos/beachFly.mp4'
-import SkiVid from '../videos/kachina.mp4'
-import DiveVid from '../videos/diving.mp4'
-import BikeVid from '../videos/biking.mp4'
-import HikeVid from '../videos/hiking.mp4'
 
-function About() {
-  const hobbies = [
-    {name: 'Fly Fishing', image: flyfish, video: "https://fishing-video.s3.amazonaws.com/beachFlyFish.mp4"},
-    {name: 'Hiking', image: hike, video: "https://hiking-video.s3.amazonaws.com/hiking.mp4"},
-    {name: 'Skiing', image: skiing, video: "https://skiing-video.s3.amazonaws.com/1+(1).mp4"},
-    {name: 'Diving', image: beachSunset, video: "https://diving-video.s3.amazonaws.com/diving.mp4"},
-    {name: 'Biking', image: beachBikes, video: "https://biking-video.s3.amazonaws.com/biking.mp4"},
-  ]
+function About({loading, developer}) {
+  console.log("Developer About Screen", developer.hobbies)
+  const hobbies = developer.hobbies
   const [activeHobby, setActiveHobby] = useState(0)
   const hobby = hobbies[activeHobby]
   const activeVideo = hobby.video
   const checkArrow = (direction) => {
-    if(direction == 'right') {
-      return(hobby.name !== 'Biking')
+    if(direction === 'right') {
+      return(hobby !== hobbies[hobbies.length - 1])
     } else {
-      return(hobby.name !== 'Fly Fishing')
+      return(hobby !== hobbies[0])
     }
   }
   const backHobby = () => {
-    if(hobby.name !== 'Fly Fishing'){setActiveHobby(activeHobby - 1)}
+    if(hobby !== hobbies[0]){setActiveHobby(activeHobby - 1)}
   }
   const nextHobby = () => {
-    if(hobby.name !== 'Biking'){setActiveHobby(activeHobby + 1)}
+    if(hobby !== hobbies[hobbies.length - 1]){setActiveHobby(activeHobby + 1)}
   }
   return(
     <div className={styles.main}>
@@ -43,6 +28,22 @@ function About() {
         title={"About Me"}
         /> 
       <div className={styles.container}>
+      {
+          loading ?
+          <div className={styles.loading}>
+            <div className={styles.loading__letter}>L</div>
+            <div className={styles.loading__letter}>o</div>
+            <div className={styles.loading__letter}>a</div>
+            <div className={styles.loading__letter}>d</div>
+            <div className={styles.loading__letter}>i</div>
+            <div className={styles.loading__letter}>n</div>
+            <div className={styles.loading__letter}>g</div>
+            <div className={styles.loading__letter}>.</div>
+            <div className={styles.loading__letter}>.</div>
+            <div className={styles.loading__letter}>.</div>
+          </div>
+          :
+        <div className={styles.vidContainer}>
         <video src={activeVideo} autoPlay loop muted className={styles.video} />
         <div className={styles.overlay}></div>
         <div className={styles.section}>
@@ -50,18 +51,13 @@ function About() {
             Background
           </div>
           <div className={styles.body}>
-            My main goal as a developer is to build highly personable applications designed to optimize efficiency and create solutions to real world problems.
-            Innovation is what drives me in every project I build. Whether it be developing new services for a startup to help Veteran's navigate post Military life, 
-            or bringing my own ideas to life; creating new products to solve business problems and provide widespread accessibility to arbitrary data is what greases
-            my development gears. When I am not coding, you can find me throwing the ball with my labrador retriever Lilly in one of the local parks or fishing for 
-            speckled sea trout & redfish from a kayak. I would be hard pressed to find a better day than hiking to a mountain stream and fly fishing all day.
+            {developer.background}
           </div>
         </div>
         <div className={styles.section}>
           <div className={styles.header}>
             Hobbies
           </div>
-
           <div className={styles.hobbies}>
             <div className={styles.images}>
               <img 
@@ -90,6 +86,8 @@ function About() {
             </div>
           </div>
         </div>
+        </div>
+}
       </div>
     </div>
   )
