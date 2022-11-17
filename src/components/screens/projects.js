@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import FetchProjects from '../apiCalls/fetchProjects'
+import React, { useState } from 'react'
 import styles from '../styles/projects.module.css'
 import ProjectBox from '../features/projectBox' 
 import Header from '../features/header'
 import Modal from '../features/modal'
 
-function Projects() {
-  const [loading, setLoading] = useState(false)
+function Projects({developer}) {
+
   const [modal, setModal] = useState(false)
-  const [projects, setProjects] = useState([])
+  const projects = developer.projects
   const [project, setProject] = useState(0)
   console.log("project Projects", project)
-  useEffect(() => {
-    FetchProjects({
-      setLoading,
-      setProjects
-    })
-  }, [])
+
   return (
     <div className={styles.main}>
       <Header 
@@ -24,39 +18,23 @@ function Projects() {
         title={"Projects"}
         /> 
       <div className={styles.container}>
-        {
-          loading ?
-          <div className={styles.loading}>
-            <div className={styles.loading__letter}>L</div>
-            <div className={styles.loading__letter}>o</div>
-            <div className={styles.loading__letter}>a</div>
-            <div className={styles.loading__letter}>d</div>
-            <div className={styles.loading__letter}>i</div>
-            <div className={styles.loading__letter}>n</div>
-            <div className={styles.loading__letter}>g</div>
-            <div className={styles.loading__letter}>.</div>
-            <div className={styles.loading__letter}>.</div>
-            <div className={styles.loading__letter}>.</div>
-          </div>
-          :
-          projects.map((project, index) =>
-            <ProjectBox
-              key={index}
-              index={index}
-              name={project.name}
-              description={project.description}
-              features={project.features}
-              apis={project.apis}
-              frameworks={project.frameworks}
-              classification={project.classification}
-              hosts={project.hosts}
-              url={project.url}
-              github={project.github}
-              setModal={setModal}
-              setProject={setProject}
-            />
-          )
-        }
+        {projects.map((project, index) =>
+          <ProjectBox
+            key={index}
+            index={index}
+            name={project.name}
+            description={project.description}
+            features={project.features}
+            apis={project.apis}
+            frameworks={project.frameworks}
+            classification={project.classification}
+            hosts={project.hosts}
+            url={project.url}
+            github={project.github}
+            setModal={setModal}
+            setProject={setProject}
+          />
+        )}
         {
           modal ?
           <Modal 
