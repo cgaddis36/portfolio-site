@@ -44,27 +44,33 @@ function About({loading, developer}) {
           </div>
           :
         <div className={styles.vidContainer}>
-        <video src={activeVideo} autoPlay loop muted className={styles.video} />
-        <div className={styles.overlay}></div>
-        <div className={styles.section}>
-          <div className={styles.header}>
-            Background
-          </div>
-          <div className={styles.body}>
-            {developer.background}
-          </div>
-        </div>
-        <div className={styles.section}>
-          <div className={styles.header}>
-            Hobbies
-          </div>
-          <div className={styles.hobbies}>
-            <div className={styles.images}>
-              <img 
-                src={hobby.image}
-                className={styles.hobbyImage}
-                />
+          {hobbies.map((hobby, index) => 
+            <video src={hobby.video} autoPlay loop muted className={index == activeHobby ? styles.video : styles.inactiveVideo} />
+
+          )}
+          <div className={styles.overlay}></div>
+          <div className={styles.section}>
+            <div className={styles.header}>
+              Background
             </div>
+            <div className={styles.body}>
+              {developer.background}
+            </div>
+          </div>
+          <div className={styles.section}>
+            <div className={styles.header}>
+              Hobbies
+            </div>
+            <div className={styles.hobbies}>
+              <div className={styles.images}>
+                
+                {hobbies.map((hobby, index) => 
+                  <img 
+                    src={hobby.image}
+                    className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
+                    />
+                    )}
+              </div>
             <div className={styles.column}>
               <div className={styles.hobby}>
                 {hobby.name}
@@ -84,7 +90,10 @@ function About({loading, developer}) {
                 </div>
               </div>
             </div>
+
+            
           </div>
+          
         </div>
         </div>
 }

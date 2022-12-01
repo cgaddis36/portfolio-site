@@ -68,6 +68,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100vh;
+  margin-left: 33vh;
 }
 
 .header {
@@ -117,6 +118,27 @@
   position: relative;
   
 }
+.hobbyImage {
+  height: 25vh;
+  width: 30vh;
+  border-radius: 20px;
+  opacity: .8;
+  object-fit: cover;
+  position: absolute;
+}
+.inactiveHobbyImage {
+  height: 25vh;
+  width: 30vh;
+  border-radius: 20px;
+  position: absolute;
+  visibility: hidden;
+}
+.images {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  flex-wrap: inherit;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -145,16 +167,9 @@
   text-align: left;
   color: transparent;
   -webkit-text-stroke: 1px rgb(225, 228, 238);
+  margin-bottom: 13vh;
 }
 
-.hobbyImage {
-  height: 25vh;
-  width: 30vh;
-  border-radius: 20px;
-  margin-right: 3vh;
-  margin-top: 1vh;
-  opacity: .8;
-}
 .hobbies {
   display: flex;
   flex-direction: row;
@@ -188,7 +203,14 @@
   border-radius: 15px;
 
 }
-
+.inactiveVideo {
+  height: 75vh;
+  width: 98vh;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 15px;
+  opacity: 0;
+}
 .activeArrow {
   color: #fff;
   font-size: 3vh;
