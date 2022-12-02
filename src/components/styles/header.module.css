@@ -1,48 +1,95 @@
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.name {
-  font-weight: bold;
-}
-.headerContainer {
-  height: 5vh;
-  width: 25vh;
-  background-color: rgb(232, 252, 250);
-  border-radius: 15px;
-  color: rgb(22, 63, 101);
-  text-align: center;
-  padding: 1vh;
-  border: 10px double rgb(10, 110, 110);
-  border-radius: 20px;
-  margin-bottom: 1.25vh;
+@keyframes color {
+  0% { 
+    border-color: #f36cd1; 
+    color: #87f4f4; 
+  }
+  20% { 
+    border-color: #87f4f4; 
+    color: #f36cd1;
+  } 
+  40%   { 
+    border-color:#fded6f; 
+    color:#f39508; 
+  }
+  60%  { 
+    border-color:#f39508; 
+    color:#fded6f; 
+  }
+  80%  { 
+    border-color:#87f4f4; 
+    color:#f36cd1; 
+  }
+  100% { 
+    border-color:#f36cd1; 
+    color:#87f4f4; 
+  }
+ }
+ @keyframes color2 {
+  0% { 
+    color: #f36cd1; 
+    border-color: #87f4f4; 
+  }
+  20% { 
+    color: #87f4f4; 
+    border-color: #f36cd1; 
+  } 
+  40%   { 
+    color:#fded6f; 
+    border-color:#f39508; 
+  }
+  60%  { 
+    color:#f39508; 
+    border-color:#fded6f; 
+  }
+  80%  { 
+    color:#87f4f4; 
+    border-color:#f36cd1; 
+  }
+  100% { 
+    color:#f36cd1; 
+    border-color:#87f4f4; 
+  } 
 }
 .email {
   font-weight: bold;
   margin-bottom: .1vh;
 }
-.info {
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 175vh;
+}
+.headerContainer {
+  height: 5vh;
+  width: 25vh;
+  border-radius: 15px;
+  color: rgb(249, 250, 251);
+  text-align: center;
+  padding: 1vh;
+  border: 5px double rgb(179, 246, 246);
+  border-radius: 20px;
+  margin-bottom: 1.25vh;
+}
+.name {
+  font-weight: bold;
 }
 .title {  
   color: rgb(225, 228, 238);
   font-size: 5vh;
-  border: 10px double rgb(10, 110, 110);
-  border-radius: 20px;
+  border-bottom: 5px solid rgb(225, 228, 238));
   padding: 1vh;
-  background-color: rgb(58, 60, 61);
   font-weight: bolder;
   margin-top: 1vh;
   margin-bottom: 1vh;
   height: 6vh;
 }
-
 .top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: space-between;
   align-content: flex-end;
-  
+  z-index: 900;
 }

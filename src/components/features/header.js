@@ -14,7 +14,7 @@ function Header({
             Chase Gaddis
           </div>
           <div className={styles.role}>
-            Software Developer
+            Software Engineer
           </div>
         
         </div>
