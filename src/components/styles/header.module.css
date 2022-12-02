@@ -74,11 +74,11 @@
 }
 .name {
   font-weight: bold;
+
 }
 .title {  
   color: rgb(225, 228, 238);
   font-size: 5vh;
-  border-bottom: 5px solid rgb(225, 228, 238));
   padding: 1vh;
   font-weight: bolder;
   margin-top: 1vh;
