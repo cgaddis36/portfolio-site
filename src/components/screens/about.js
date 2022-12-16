@@ -24,7 +24,7 @@ function About({loading, developer}) {
 
         <Header 
           active={'about'}
-          title={"About Me"}
+          title={"Chase's Portfolio Site"}
           />  
       <div className={styles.container}>
         {loading ?
@@ -46,11 +46,11 @@ function About({loading, developer}) {
             {hobbies.map((hobby, index) => 
               <video src={hobby.video} autoPlay loop muted className={index == activeHobby ? styles.video : styles.inactiveVideo} />
             )}
-            <div className={styles.overlay}/>
+            <div className={styles.overlay}>
             <div className={styles.section}>
               
-              <div className={styles.header}>
-                Background
+              <div className={styles.header2}>
+                About Me
               </div>
               <div className={styles.body}>
                 {developer.background}
@@ -88,6 +88,7 @@ function About({loading, developer}) {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>}
