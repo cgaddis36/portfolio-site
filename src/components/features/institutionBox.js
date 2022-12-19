@@ -24,20 +24,18 @@ function InstitutionBox({
             {name}
           </div>
           <div className={styles.location}>
-              {location}
+              {"Location: " + location}
+          </div>
+          <div className={styles.degree}>
+            {degree + ": " + major}
+          </div>
+
+          <div className={styles.graduation}>
+            Graduation: {graduation}
           </div>
         </div>
         </div>  
       </div>         
-      <div className={styles.degree}>
-        {degree}
-      </div>
-      <div className={styles.major}>
-        {major}
-      </div>
-      <div className={styles.graduation}>
-        Graduation - {graduation}
-      </div>
     </div>
   )
 }
