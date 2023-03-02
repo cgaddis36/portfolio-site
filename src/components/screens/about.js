@@ -6,11 +6,6 @@ import hikeImage from '../images/hike.png'
 import bikeImage from '../images/beachBikes.png'
 import flyImage from '../images/fly.png'
 import diveImage from '../images/beachSunset.png'
-import skiVideo from '../videos/ski.mp4'
-import hikeVideo from '../videos/hiking.mp4'
-import bikeVideo from '../videos/biking.mp4'
-import flyVideo from '../videos/beachFlyFish.mp4'
-import diveVideo from '../videos/diving.mp4'
 
 function About({loading, developer}) {
   const hobbies = developer.hobbies
@@ -36,13 +31,7 @@ function About({loading, developer}) {
     "bike": bikeImage,
     "fly": flyImage
   }
-  const videoHash = {
-    "ski": skiVideo,
-    "hike": hikeVideo,
-    "dive": diveVideo,
-    "bike": bikeVideo,
-    "fly": flyVideo
-  }
+
   
   return(
     <div className={styles.main}>
@@ -69,7 +58,7 @@ function About({loading, developer}) {
           
           <div className={styles.vidContainer}>
             {hobbies.map((hobby, index) => 
-              <video src={videoHash[hobby.image]} autoPlay loop muted className={index == activeHobby ? styles.video : styles.inactiveVideo} />
+              <video src={hobby.video} autoPlay loop muted className={index == activeHobby ? styles.video : styles.inactiveVideo} />
             )}
             <div className={styles.overlay}>
             <div className={styles.section}>
