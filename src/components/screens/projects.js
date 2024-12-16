@@ -4,10 +4,9 @@ import ProjectBox from '../features/projectBox'
 import Header from '../features/header'
 import Modal from '../features/modal'
 
-function Projects({developer}) {
+function Projects({projects}) {
 
   const [modal, setModal] = useState(false)
-  const projects = developer.projects
   const [project, setProject] = useState(0)
   console.log("project Projects", project)
 

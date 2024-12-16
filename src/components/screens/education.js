@@ -3,18 +3,18 @@ import styles from '../styles/education.module.css'
 import Header from '../features/header'
 import InstitutionBox from '../features/institutionBox'
 
-function Education({developer}) {
-  const institutions = developer["institutions"]
+function Education({institutions}) {
   
   return(
     <div className={styles.main}>
-        <Header 
-          active={'education'}
-          title={"Education"}
-          /> 
+      <Header 
+        active={'education'}
+        title={"Education"}
+        /> 
       <div className={styles.container}>
         <div className={styles.eduBoxes}>
-       {   institutions.map((institution, index) => 
+        { 
+          institutions.map((institution, index) => 
             <InstitutionBox
               key={index}
               name={institution.name}
@@ -25,12 +25,10 @@ function Education({developer}) {
               major={institution.major}
               image={institution.logo}
               />
-          )}
+        )}
         </div>
       </div>
-
     </div>
-
   )
 }
 
