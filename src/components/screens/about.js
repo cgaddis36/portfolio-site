@@ -7,8 +7,7 @@ import bikeImage from '../images/beachBikes.png'
 import flyImage from '../images/fly.png'
 import diveImage from '../images/beachSunset.png'
 
-function About({loading, developer}) {
-  const hobbies = developer.hobbies
+function About({loading, hobbies}) {
   const [activeHobby, setActiveHobby] = useState(0)
   const hobby = hobbies[activeHobby]
   const checkArrow = (direction) => {
