@@ -36,7 +36,7 @@ function About({developer, hobbies}) {
       <Header 
         active={'about'}
         title={"Chase's Portfolio Site"}
-        />  
+      />  
       <div className={styles.container}>
         {
           hobbies.length < 1 ?
@@ -54,55 +54,58 @@ function About({developer, hobbies}) {
           </div>
           :
           <div className={styles.vidContainer}>
-            {hobbies.map((hobby, index) => 
-              <video src={hobby.video} autoPlay loop muted className={index == activeHobby ? styles.video : styles.inactiveVideo} />
-            )}
+            {
+              hobbies.map((hobby, index) => 
+                <video src={hobby.video} autoPlay loop muted className={index == activeHobby ? styles.video : styles.inactiveVideo} />
+              )
+            }
             <div className={styles.overlay}>
-            <div className={styles.section}>
-              <div className={styles.header2}>
-                About Me
-              </div>
-              <div className={styles.body}>
-                {developer.background}
-              </div>
-            </div>
-            <div className={styles.section}>
-              <div className={styles.header}>
-                Hobbies
-              </div>
-              <div className={styles.hobbies}>
-                <div className={styles.images}> 
-                  {
-                    hobbies.map((hobby, index) => 
-                      <img 
-                        src={imageHash[hobby.image]}
-                        className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
-                        />)
-                  }
+              <div className={styles.section}>
+                <div className={styles.header2}>
+                  About Me
                 </div>
-                <div className={styles.column}>
-                  <div className={styles.hobby}>
-                    {hobby.name}
+                <div className={styles.body}>
+                  {developer.background}
+                </div>
+              </div>
+              <div className={styles.section}>
+                <div className={styles.header}>
+                  Hobbies
+                </div>
+                <div className={styles.hobbies}>
+                  <div className={styles.images}> 
+                    {
+                      hobbies.map((hobby, index) => 
+                        <img 
+                          src={imageHash[hobby.image]}
+                          className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
+                        />
+                      )
+                    }
                   </div>
-                  <div className={styles.nextButtons}>
-                    <div 
-                      onClick={() => backHobby()}
-                      className={checkArrow('left') ? styles.activeArrow : styles.inactiveArrow}
-                      > 
-                      Last Hobby
+                  <div className={styles.column}>
+                    <div className={styles.hobby}>
+                      {hobby.name}
                     </div>
-                  <div 
-                    onClick={() => nextHobby()}
-                    className={checkArrow('right') ? styles.activeArrow : styles.inactiveArrow}
-                    >
-                    Next Hobby
+                    <div className={styles.nextButtons}>
+                      <div 
+                        onClick={() => backHobby()}
+                        className={checkArrow('left') ? styles.activeArrow : styles.inactiveArrow}
+                        > 
+                        Last Hobby
+                      </div>
+                      <div 
+                        onClick={() => nextHobby()}
+                        className={checkArrow('right') ? styles.activeArrow : styles.inactiveArrow}
+                      >
+                        Next Hobby
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
-        </div>
         }
       </div>
     </div>

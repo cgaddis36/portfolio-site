@@ -11,20 +11,20 @@ function Education({institutions}) {
         /> 
       <div className={styles.container}>
         <div className={styles.eduBoxes}>
-        { 
-          institutions.map((institution, index) => 
-            <InstitutionBox
-              key={index}
-              name={institution.name}
-              city={institution.city}
-              state={institution.state}
-              graduation={institution.graduation}
-              degree={institution.degree}
-              major={institution.major}
-              image={institution.logo}
-              />
-            )
-        }
+          { 
+            institutions.map((institution, index) => 
+              <InstitutionBox
+                key={index}
+                name={institution.name}
+                city={institution.city}
+                state={institution.state}
+                graduation={institution.graduation}
+                degree={institution.degree}
+                major={institution.major}
+                image={institution.logo}
+                />
+              )
+          }
         </div>
       </div>
     </div>
