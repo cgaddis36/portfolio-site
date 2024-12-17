@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../styles/modal.module.css'
 import xIcon from '../../assets/images/x.svg'
 function Modal({
@@ -8,12 +7,10 @@ function Modal({
   setProject
 }) {
   const activeProject = projects[project] 
-  const nextClick = (pro) => {
-    setProject(pro)
-  }
+  // const nextClick = (pro) => {
+  //   setProject(pro)
+  // }
   const navigatePath = () => {
-    console.log("URL Path", activeProject.url)
-
     window.open(activeProject.url, '_blank', 'noopener,noreferrer')
   }
   const githubShow = () => {
@@ -25,7 +22,6 @@ function Modal({
   }
   const show = githubShow()
   const githubNav = () => {
-    console.log("Github", activeProject.github)
     window.open(activeProject.github, '_blank', 'noopener,noreferrer')
   }
   return (
@@ -60,7 +56,6 @@ function Modal({
           onClick={() => setModal(false)}
           />
       </div>
-
       <div className={styles.header}>
         Description
       </div>
@@ -94,7 +89,6 @@ function Modal({
       <div className={styles.header}>
         Hosting Architecture
       </div>
-
       <div className={styles.hosts}>
         {
           activeProject.hosts.map((host) => 
@@ -117,7 +111,6 @@ function Modal({
         }
       </div>
     </div>
-    
   )
 }
 export default Modal

@@ -1,4 +1,3 @@
-import React, {useState} from 'react'
 import styles from '../styles/navBar.module.css'
 import { useNavigate } from 'react-router-dom'
 function NavBar({

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styles from '../styles/about.module.css'
 import Header from '../features/header'
 import skiImage from '../../assets/images/skiChris.png'
@@ -31,7 +31,6 @@ function About({developer, hobbies}) {
     "fly": flyImage
   }
 
-  
   return(
     <div className={styles.main}>
       <Header 
@@ -39,7 +38,8 @@ function About({developer, hobbies}) {
         title={"Chase's Portfolio Site"}
         />  
       <div className={styles.container}>
-        {hobbies.length < 1 ?
+        {
+          hobbies.length < 1 ?
           <div className={styles.loading}>
             <div className={styles.loading__letter}>L</div>
             <div className={styles.loading__letter}>o</div>
@@ -72,12 +72,13 @@ function About({developer, hobbies}) {
               </div>
               <div className={styles.hobbies}>
                 <div className={styles.images}> 
-                  {hobbies.map((hobby, index) => 
-                    <img 
-                      src={imageHash[hobby.image]}
-                      className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
-                      />
-                  )}
+                  {
+                    hobbies.map((hobby, index) => 
+                      <img 
+                        src={imageHash[hobby.image]}
+                        className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
+                        />)
+                  }
                 </div>
                 <div className={styles.column}>
                   <div className={styles.hobby}>
@@ -101,7 +102,8 @@ function About({developer, hobbies}) {
             </div>
             </div>
           </div>
-        </div>}
+        </div>
+        }
       </div>
     </div>
   )

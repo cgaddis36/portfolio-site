@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react'
 import styles from '../styles/education.module.css'
 import Header from '../features/header'
 import InstitutionBox from '../features/institutionBox'
 
 function Education({institutions}) {
-  
   return(
     <div className={styles.main}>
       <Header 
@@ -25,11 +23,11 @@ function Education({institutions}) {
               major={institution.major}
               image={institution.logo}
               />
-        )}
+            )
+        }
         </div>
       </div>
     </div>
   )
 }
-
 export default Education
