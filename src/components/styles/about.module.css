@@ -83,38 +83,13 @@
   margin-left: 33vh;
 }
 .container {
-  border: 5px double rgb(10, 110, 110);
-  border-radius: 20px;
-  margin-top: 3vh;
-  background-color: rgb(224, 240, 253);
-  height: 75vh;
-  width: 98vh;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   position: relative; 
-}
-.header {
-  font-size: 5vh;
-  text-align: left;
-  margin-left: 2vh;
-  font-weight: bolder;
-  position: relative;
-  color: transparent;
-  -webkit-text-stroke: 1px rgb(225, 228, 238);
-
-}
-.header2 {
-  font-size: 4vw;
-  text-align: center;
-  margin-left: 2vh;
-  color: rgb(225, 228, 238);
-  font-weight: bolder;
-  position: relative;
-  opacity: .9;
-  color: transparent;
-  -webkit-text-stroke: 1px rgb(225, 228, 238);
 }
 .hobby {
   margin-right: 1vh;
@@ -216,6 +191,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 .nextButtons {
   display: flex;
@@ -226,9 +203,8 @@
 }
 .overlay {
   height: 45vw;
-  min-height: 85vh;
-
-  width: 60vw;
+  min-height: 85%;
+  width: 60%;
   object-fit: cover;
   position: absolute;
   border-radius: 15px;
@@ -258,8 +234,8 @@
   border: .1px double rgb(10, 110, 110);
   border-radius: 20px;
   background-color: rgb(224, 240, 253);
-  height: 100vh;
-  width: 100vw;
+  height: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -268,8 +244,8 @@
   position: relative;
 }
 .video {
-  height: 115vh;
-  width: 196vh;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   position: absolute;
   border-radius: 15px;
