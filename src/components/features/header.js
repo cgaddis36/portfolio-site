@@ -6,28 +6,18 @@ function Header({
   title
 }) {
   return(
-    <div className={styles.top}>
-      <div className={styles.header}>
-        <NavBar
-          active={active}
-          />
-        <div className={styles.title}>
-          {title}
-        </div>
-        <div className={styles.headerContainer}>
-          <div className={styles.headerInfoColumn}>
-            <div className={styles.name}>
-              Chase Gaddis
-            </div>
-            <div className={styles.role}>
-              Full-Stack Engineer
-            </div>
+    <div className={styles.main}>
+      <NavBar
+        active={active}
+      />
+      <div className={styles.title}>
+        {title}
+      </div>
+      <div className={styles.headerContainer}>
+        <div className={styles.headerInfoColumn}>
+          <div className={styles.email}>
+              Contact Me: cgaddis36@gmail.com
           </div>
-          <div className={styles.headerInfoColumn}>
-            <div className={styles.email}>
-                cgaddis36@gmail.com
-            </div>
-           </div>
         </div>
       </div>
     </div>
