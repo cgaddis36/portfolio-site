@@ -60,46 +60,48 @@ function About({developer, hobbies}) {
               )
             }
             <div className={styles.overlay}>
-              <div className={styles.section}>
-                <div className={styles.header2}>
+              <div className={styles.topSection}>
+                <div className={styles.aboutHeader}>
                   About Me
                 </div>
                 <div className={styles.body}>
                   {developer.background}
                 </div>
               </div>
-              <div className={styles.section}>
-                <div className={styles.header}>
-                  Hobbies
-                </div>
-                <div className={styles.hobbies}>
-                  <div className={styles.images}> 
-                    {
-                      hobbies.map((hobby, index) => 
-                        <img 
-                          src={imageHash[hobby.image]}
-                          className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
-                        />
-                      )
-                    }
+              <div className={styles.bottomSection}>
+                <div className={styles.leftColumn}>
+                  <div className={styles.hobbyHeader}>
+                    Hobbies
                   </div>
-                  <div className={styles.column}>
-                    <div className={styles.hobby}>
-                      {hobby.name}
+                  <div className={styles.hobbies}>
+                    <div className={styles.images}> 
+                      {
+                        hobbies.map((hobby, index) => 
+                          <img 
+                            src={imageHash[hobby.image]}
+                            className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
+                          />
+                        )
+                      }
                     </div>
-                    <div className={styles.nextButtons}>
-                      <div 
-                        onClick={() => backHobby()}
-                        className={checkArrow('left') ? styles.activeArrow : styles.inactiveArrow}
-                        > 
-                        Last Hobby
-                      </div>
-                      <div 
-                        onClick={() => nextHobby()}
-                        className={checkArrow('right') ? styles.activeArrow : styles.inactiveArrow}
-                      >
-                        Next Hobby
-                      </div>
+                  </div>
+                </div>
+                <div className={styles.rightColumn}>
+                  <div className={styles.hobby}>
+                    {hobby.name}
+                  </div>
+                  <div className={styles.nextButtons}>
+                    <div 
+                      onClick={() => backHobby()}
+                      className={checkArrow('left') ? styles.activeArrow : styles.inactiveArrow}
+                    > 
+                      Last Hobby
+                    </div>
+                    <div 
+                      onClick={() => nextHobby()}
+                      className={checkArrow('right') ? styles.activeArrow : styles.inactiveArrow}
+                    >
+                      Next Hobby
                     </div>
                   </div>
                 </div>
