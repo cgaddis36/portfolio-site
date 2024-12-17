@@ -52,12 +52,14 @@
 }
 .email {
   font-size: 1em;
+  text-align: right;
+  padding-right: 1%;
 }
 
-.headerContainer {
+.headerRight {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   width: 33%;
   color: rgb(249, 250, 251);
   text-align: center;
@@ -66,13 +68,7 @@
 .name {
   font-size: 1em;
 }
-.headerInfoColumn {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-self: center;
-}
+
 .role {
   font-size: 1em;
 }
@@ -90,7 +86,6 @@
   align-items: space-between;
   align-content: center;
   align-self: center;
-  /* margin-bottom: 5vh; */
   font-size: 1.4em;
   height: 5%;
   width: 100%;

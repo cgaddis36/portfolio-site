@@ -13,11 +13,9 @@ function Header({
       <div className={styles.title}>
         {title}
       </div>
-      <div className={styles.headerContainer}>
-        <div className={styles.headerInfoColumn}>
-          <div className={styles.email}>
-              Contact Me: cgaddis36@gmail.com
-          </div>
+      <div className={styles.headerRight}>
+        <div className={styles.email}>
+          Contact Me: cgaddis36@gmail.com
         </div>
       </div>
     </div>
