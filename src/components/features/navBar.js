@@ -8,7 +8,7 @@ function NavBar({
     navigate(path)
   }
   return (
-  <div className={styles.nav}>
+  <div className={styles.main}>
     <div 
       onClick={() => swapPath('/')} 
       className={active === 'about' ? styles.active : styles.navButton}
