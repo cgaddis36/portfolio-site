@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/modal.module.css'
-import xIcon from '../images/x.svg'
+import xIcon from '../../assets/images/x.svg'
 function Modal({
   projects,
   setModal,

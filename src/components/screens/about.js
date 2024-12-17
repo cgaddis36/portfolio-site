@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import styles from '../styles/about.module.css'
 import Header from '../features/header'
-import skiImage from '../images/skiChris.png'
-import hikeImage from '../images/hike.png'
-import bikeImage from '../images/beachBikes.png'
-import flyImage from '../images/fly.png'
-import diveImage from '../images/beachSunset.png'
+import skiImage from '../../assets/images/skiChris.png'
+import hikeImage from '../../assets/images/hike.png'
+import bikeImage from '../../assets/images/beachBikes.png'
+import flyImage from '../../assets/images/fly.png'
+import diveImage from '../../assets/images/beachSunset.png'
 
-function About({loading, developer}) {
-  const hobbies = developer.hobbies
+function About({developer, hobbies}) {
   const [activeHobby, setActiveHobby] = useState(0)
   const hobby = hobbies[activeHobby]
   const checkArrow = (direction) => {
@@ -35,13 +34,12 @@ function About({loading, developer}) {
   
   return(
     <div className={styles.main}>
-
-        <Header 
-          active={'about'}
-          title={"Chase's Portfolio Site"}
-          />  
+      <Header 
+        active={'about'}
+        title={"Chase's Portfolio Site"}
+        />  
       <div className={styles.container}>
-        {loading ?
+        {hobbies.length < 1 ?
           <div className={styles.loading}>
             <div className={styles.loading__letter}>L</div>
             <div className={styles.loading__letter}>o</div>
@@ -55,14 +53,12 @@ function About({loading, developer}) {
             <div className={styles.loading__letter}>.</div>
           </div>
           :
-          
           <div className={styles.vidContainer}>
             {hobbies.map((hobby, index) => 
               <video src={hobby.video} autoPlay loop muted className={index == activeHobby ? styles.video : styles.inactiveVideo} />
             )}
             <div className={styles.overlay}>
             <div className={styles.section}>
-              
               <div className={styles.header2}>
                 About Me
               </div>
