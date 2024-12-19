@@ -35,8 +35,8 @@ function About({developer, hobbies}) {
     <div className={styles.main}>
       <Header 
         active={'about'}
-        title={"Chase's Portfolio Site"}
-      />  
+        title={"Chase Gaddis"}
+      />
       <div className={styles.container}>
         <div className={styles.vidContainer}>
           <video 
