@@ -38,77 +38,63 @@ function About({developer, hobbies}) {
         title={"Chase's Portfolio Site"}
       />  
       <div className={styles.container}>
-        {
-          hobbies.length < 1 ?
-          <div className={styles.loading}>
-            <div className={styles.loading__letter}>L</div>
-            <div className={styles.loading__letter}>o</div>
-            <div className={styles.loading__letter}>a</div>
-            <div className={styles.loading__letter}>d</div>
-            <div className={styles.loading__letter}>i</div>
-            <div className={styles.loading__letter}>n</div>
-            <div className={styles.loading__letter}>g</div>
-            <div className={styles.loading__letter}>.</div>
-            <div className={styles.loading__letter}>.</div>
-            <div className={styles.loading__letter}>.</div>
-          </div>
-          :
-          <div className={styles.vidContainer}>
-            {
-              hobbies.map((hobby, index) => 
-                <video src={hobby.video} autoPlay loop muted className={index == activeHobby ? styles.video : styles.inactiveVideo} />
-              )
-            }
-            <div className={styles.overlay}>
-              <div className={styles.topSection}>
-                <div className={styles.aboutHeader}>
-                  About Me
+        <div className={styles.vidContainer}>
+          <video 
+            className={styles.video} 
+            src={hobbies[activeHobby].video} 
+            autoPlay 
+            loop 
+            muted 
+          />
+          <div className={styles.overlay}>
+            <div className={styles.topSection}>
+              <div className={styles.aboutHeader}>
+                About Me
+              </div>
+              <div className={styles.body}>
+                {developer.background}
+              </div>
+            </div>
+            <div className={styles.bottomSection}>
+              <div className={styles.leftColumn}>
+                <div className={styles.hobbyHeader}>
+                  Hobbies
                 </div>
-                <div className={styles.body}>
-                  {developer.background}
+                <div className={styles.hobbies}>
+                  <div className={styles.images}> 
+                    {
+                      hobbies.map((hobby, index) => 
+                        <img 
+                          src={imageHash[hobby.image]}
+                          className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
+                        />
+                      )
+                    }
+                  </div>
                 </div>
               </div>
-              <div className={styles.bottomSection}>
-                <div className={styles.leftColumn}>
-                  <div className={styles.hobbyHeader}>
-                    Hobbies
-                  </div>
-                  <div className={styles.hobbies}>
-                    <div className={styles.images}> 
-                      {
-                        hobbies.map((hobby, index) => 
-                          <img 
-                            src={imageHash[hobby.image]}
-                            className={index == activeHobby ? styles.hobbyImage : styles.inactiveHobbyImage}
-                          />
-                        )
-                      }
-                    </div>
-                  </div>
+              <div className={styles.rightColumn}>
+                <div className={styles.hobby}>
+                  {hobby.name}
                 </div>
-                <div className={styles.rightColumn}>
-                  <div className={styles.hobby}>
-                    {hobby.name}
+                <div className={styles.nextButtons}>
+                  <div 
+                    onClick={() => backHobby()}
+                    className={checkArrow('left') ? styles.activeArrow : styles.inactiveArrow}
+                  > 
+                    Last Hobby
                   </div>
-                  <div className={styles.nextButtons}>
-                    <div 
-                      onClick={() => backHobby()}
-                      className={checkArrow('left') ? styles.activeArrow : styles.inactiveArrow}
-                    > 
-                      Last Hobby
-                    </div>
-                    <div 
-                      onClick={() => nextHobby()}
-                      className={checkArrow('right') ? styles.activeArrow : styles.inactiveArrow}
-                    >
-                      Next Hobby
-                    </div>
+                  <div 
+                    onClick={() => nextHobby()}
+                    className={checkArrow('right') ? styles.activeArrow : styles.inactiveArrow}
+                  >
+                    Next Hobby
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        }
+        </div>
       </div>
     </div>
   )
