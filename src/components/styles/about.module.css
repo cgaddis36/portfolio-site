@@ -1,3 +1,42 @@
+@keyframes color {
+  0% { 
+    box-shadow: 0 0 15px #f36cd1; 
+    -moz-box-shadow: 0 0 15px #f36cd1; 
+    -webkit-box-shadow: 0 0 15px #f36cd1; 
+    -o-box-shadow: 0 0 15px #f36cd1; 
+  }
+  20% { 
+    box-shadow: 0 0 15px #87f4f4; 
+    -moz-box-shadow: 0 0 15px #87f4f4; 
+    -webkit-box-shadow: 0 0 15px #87f4f4; 
+    -o-box-shadow: 0 0 15px #87f4f4; 
+  } 
+  40%   { 
+    box-shadow: 0 0 15px #fded6f; 
+    -moz-box-shadow: 0 0 15px #fded6f; 
+    -webkit-box-shadow: 0 0 15px #fded6f; 
+    -o-box-shadow: 0 0 15px #fded6f; 
+  }
+  60%  { 
+    box-shadow: 0 0 15px #f39508; 
+    -moz-box-shadow: 0 0 15px #f39508; 
+    -webkit-box-shadow: 0 0 15px #f39508; 
+    -o-box-shadow: 0 0 15px #f39508; 
+  }
+  80%  { 
+    box-shadow: 0 0 15px #87f4f4; 
+    -moz-box-shadow: 0 0 15px #87f4f4; 
+    -webkit-box-shadow: 0 0 15px #87f4f4; 
+    -o-box-shadow: 0 0 15px #87f4f4; 
+  }
+  100% { 
+    box-shadow: 0 0 15px #f36cd1; 
+    -moz-box-shadow: 0 0 15px #f36cd1; 
+    -webkit-box-shadow: 0 0 15px #f36cd1; 
+    -o-box-shadow: 0 0 15px #f36cd1; 
+  }
+ }
+
 .activeArrow {
   color: #fff;
   font-size: 2em;
@@ -208,16 +247,4 @@
   position: absolute;
   border-radius: 15px;
   
-}
-@keyframes bounce {
-  0% {
-      transform: translateY(0px);
-  }
-  40% {
-      transform: translateY(-40px);
-  }
-  80%,
-  100% {
-      transform: translateY(0px);
-  }
 }
