@@ -1,16 +1,16 @@
 
 interface Project {
-  id: Number,
-  name: String,
-  classification: String,
-  url: String,
-  github: String,
-  hosts: String[],
-  frameworks: String[],
-  languages: String[],
-  apis: String[],
-  features: String[],
-  description: String,
+  id: number,
+  name: string,
+  classification: string,
+  url: string,
+  github: string,
+  hosts: string[],
+  frameworks: string[],
+  languages: string[],
+  apis: string[],
+  features: string[],
+  description: string,
 }
 
 export default Project

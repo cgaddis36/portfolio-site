@@ -1,8 +1,8 @@
 interface Hobby {
-  id: Number,
-  name: String, 
-  image: String,
-  video: String
+  id: number,
+  name: string, 
+  image: string,
+  video: string
 }
 
 export default Hobby
