@@ -25,7 +25,7 @@ const Blog: React.FC<Props> = ({
                 className={activePost.title == post.title ? styles.inactiveNavLink : styles.navLink}
                 onClick={()=>setActivePost(post)}
               >
-                {activePost.title}
+                {post.title}
               </div>
             )
           }

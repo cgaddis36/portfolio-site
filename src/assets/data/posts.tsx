@@ -33,6 +33,15 @@ const posts: Post[] = [
             "The ShoreCasts team is excited to continue developing applications that help provide access to the most reliable and informative data on Marinas, Tackle Shops, and Boat Ramps in the US.`",
     ]
   },
+  {
+    id: 2,
+    date: "8/6/2024",
+    title: "Rails GraphQL CRUD",
+    body: [
+      "A few months back, I wrote my first technical tutorial on Medium. It covers the basics of creating a CRUD API using Ruby on Rails, GraphQL, Postgres, and testing your endpoints in RSpec. You can check it out at the following URL by pasting it into your browser:", 
+      "https://medium.com/@cgaddis36/rails-7-graphql-crud-api-w-postgres-a-comprehensive-guide-e0397fa3f76d"
+    ]
+  }
 ]
 
 export default posts

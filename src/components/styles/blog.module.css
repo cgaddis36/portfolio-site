@@ -67,6 +67,8 @@
   margin-left: 5%;
   border: .5px solid #1c93e2;
   border-radius: 5px;
+  margin-bottom: 3%;
+  animation: color 7s infinite;
 }
 .navLink:hover {
   cursor: pointer;
@@ -84,7 +86,8 @@
   border: .5px solid #1c93e2;
   border-radius: 5px;
   pointer-events: none;
-  animation: color 7s infinite;
+  margin-bottom: 3%;
+
 }
 .inactiveNavLink:hover {
   cursor: default;
