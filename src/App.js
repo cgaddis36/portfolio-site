@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Projects from './components/screens/projects'
 import Education from './components/screens/education'
 import About from './components/screens/about'
+import Blog from './components/screens/blog'
+import posts from './assets/data/posts'
 import hobbies from './assets/data/hobbies.tsx'
 import institutions from './assets/data/institutions.tsx'
 import projects from './assets/data/projects.tsx'
@@ -18,6 +20,14 @@ function App() {
               <About 
                 developer={developer} 
                 hobbies={hobbies}
+              />
+            }
+          />
+          <Route 
+            path="/blog" 
+            element={
+              <Blog 
+                posts={posts}
               />
             }
           />
