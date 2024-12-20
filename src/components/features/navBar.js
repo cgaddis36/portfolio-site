@@ -4,34 +4,31 @@ function NavBar({
   active
 }) {
   const navigate = useNavigate()
-  const swapPath = (path) => {
-    navigate(path)
-  }
   return (
   <div className={styles.main}>
     <div 
-      onClick={() => swapPath('/')} 
+      onClick={() => navigate('/')} 
       className={active === 'about' ? styles.active : styles.navButton}
-      >
+    >
       About Me
     </div>
-     <div
-      onClick={() => swapPath('/education')} 
+    <div 
+      onClick={() => navigate('/projects')} 
+      className={active === 'projects' ? styles.active : styles.navButton}
+    >
+      Projects
+    </div>
+    <div
+      onClick={() => navigate('/education')} 
       className={active === 'education' ? styles.active : styles.navButton}
-      >
+    >
       Education
     </div>
     <div 
-      onClick={() => swapPath('/experience')} 
+      onClick={() => navigate('/experience')} 
       className={active === 'experience' ? styles.active : styles.navButton}
-      >
+    >
       Experience
-    </div>
-    <div 
-      onClick={() => swapPath('/projects')} 
-      className={active === 'projects' ? styles.active : styles.navButton}
-      >
-      Projects
     </div>
   </div>
   )
