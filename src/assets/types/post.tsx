@@ -2,7 +2,7 @@ interface Post {
     id: number, 
     date: string,
     title: string,
-    body: string
+    body: string[]
 }
 
 export default Post
