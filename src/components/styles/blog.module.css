@@ -1,0 +1,37 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.postContainer {
+  height: 90%;
+  width: 90%;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 5%;
+}
+
+.date {
+  font-size: 1em;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.body {
+  width: 95%;
+  height: 95%;
+  border: 2px solid #10175e;
+  box-shadow: 1px 2px 9px antiquewhite;
+  border-radius: 10px;
+}
