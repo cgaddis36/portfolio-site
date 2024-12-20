@@ -3,7 +3,6 @@ interface Developer {
   firstName: String,
   lastName: String,
   email: String,
-  phone: String,
   github: String,
   title: String,
   background: String

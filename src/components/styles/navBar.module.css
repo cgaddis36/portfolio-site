@@ -3,12 +3,12 @@
   font-weight: bold;
   color: rgb(187, 179, 171);
 }
-.nav {
+.main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-content: space-around;
-  width: 30vw;
+  width: 33%;
 }
 .navButton {
   font-size:  1vw;

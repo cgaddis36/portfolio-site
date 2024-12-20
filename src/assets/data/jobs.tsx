@@ -7,7 +7,7 @@ const jobs: Job[] = [
     company: "Shrimp Republic Studios",
     industry: "Software Development & Consulting",
     startDate: "08/2021",
-    endDate: "08/2022",
+    endDate: "Present",
     city: "Palmetto",
     state: "FL",
     summary: ""

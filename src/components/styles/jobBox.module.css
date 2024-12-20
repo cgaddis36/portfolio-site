@@ -1,6 +1,45 @@
+@keyframes color {
+  0% { 
+    box-shadow: 0 0 15px #f36cd1; 
+    -moz-box-shadow: 0 0 15px #f36cd1; 
+    -webkit-box-shadow: 0 0 15px #f36cd1; 
+    -o-box-shadow: 0 0 15px #f36cd1; 
+  }
+  20% { 
+    box-shadow: 0 0 15px #87f4f4; 
+    -moz-box-shadow: 0 0 15px #87f4f4; 
+    -webkit-box-shadow: 0 0 15px #87f4f4; 
+    -o-box-shadow: 0 0 15px #87f4f4; 
+  } 
+  40%   { 
+    box-shadow: 0 0 15px #fded6f; 
+    -moz-box-shadow: 0 0 15px #fded6f; 
+    -webkit-box-shadow: 0 0 15px #fded6f; 
+    -o-box-shadow: 0 0 15px #fded6f; 
+  }
+  60%  { 
+    box-shadow: 0 0 15px #f39508; 
+    -moz-box-shadow: 0 0 15px #f39508; 
+    -webkit-box-shadow: 0 0 15px #f39508; 
+    -o-box-shadow: 0 0 15px #f39508; 
+  }
+  80%  { 
+    box-shadow: 0 0 15px #87f4f4; 
+    -moz-box-shadow: 0 0 15px #87f4f4; 
+    -webkit-box-shadow: 0 0 15px #87f4f4; 
+    -o-box-shadow: 0 0 15px #87f4f4; 
+  }
+  100% { 
+    box-shadow: 0 0 15px #f36cd1; 
+    -moz-box-shadow: 0 0 15px #f36cd1; 
+    -webkit-box-shadow: 0 0 15px #f36cd1; 
+    -o-box-shadow: 0 0 15px #f36cd1; 
+  }
+ }
+
 .box {
-  width: 40vh;
-  height: 20vh;
+  width: 80%;
+  height: 20%;
   background-color: rgb(225, 228, 238);
   border: 2px solid rgb(10, 110, 110);
   border-radius: 15px;
@@ -24,6 +63,7 @@
   -moz-box-shadow: 0 0 10px  rgb(25, 179, 179);
   -webkit-box-shadow: 0 0 10px  rgb(25, 179, 179);
   -o-box-shadow: 0 0 10px  rgb(25, 179, 179);
+  animation: color 9s infinite;
 }
 .company {
   font-size: 2vh;

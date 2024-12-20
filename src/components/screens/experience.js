@@ -22,10 +22,10 @@ function Experience({jobs}) {
             company={job.company}
             industry={job.industry}
             />
-        )}
+          )
+      }
       </div>
     </div>
   )
 }
-
 export default Experience
