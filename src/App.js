@@ -9,6 +9,7 @@ import hobbies from './assets/data/hobbies.tsx'
 import institutions from './assets/data/institutions.tsx'
 import projects from './assets/data/projects.tsx'
 import developer from './assets/data/developer'
+
 function App() {
   return (
     <div className="App">
