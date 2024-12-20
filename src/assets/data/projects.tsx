@@ -1,9 +1,7 @@
 import Project from "../types/project";
-import jobs from "./jobs";
 const projects: Project[] = [
   {
     id: 1,
-    job: jobs[0],
     name: 'ShoreCasts',
     classification: 'Personal Project',
     url: 'https://www.shorecasts.com',
@@ -25,7 +23,6 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    job: jobs[0],
     name: 'Shrimp Republic Flagship',
     classification: 'Personal Project',
     url: 'https://www.shorecasts.com',
@@ -47,7 +44,6 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    job: jobs[0],
     name: 'GameDrive',
     classification: 'Personal Project',
     url: 'https://www.shorecasts.com',
@@ -69,7 +65,6 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    job: jobs[0],
     name: 'ChessMeito',
     classification: 'Personal Project',
     url: 'https://www.shorecasts.com',
@@ -91,7 +86,6 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    job: jobs[1],
     name: 'Claims Form',
     classification: 'Work Project',
     url: 'https://www.leapeasy.com/claim-form/',
@@ -105,7 +99,6 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    job: jobs[1],
     name: 'Lease Deposit Replacement Short Form',
     classification: 'Work Project',
     url: 'https://www.leapeasy.com/claim-form/',
@@ -119,7 +112,6 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    job: jobs[1],
     name: 'Lease Deposit-Replacement Form',
     classification: 'Work Project',
     url: 'https://www.leapeasy.com/claim-form/',
@@ -133,7 +125,6 @@ const projects: Project[] = [
   },
   {
     id: 8,
-    job: jobs[1],
     name: 'Landlord Contact Form',
     classification: 'Work Project',
     url: 'https://www.leapeasy.com/claim-form/',
@@ -147,7 +138,6 @@ const projects: Project[] = [
   },
   {
     id: 9,
-    job: jobs[1],
     name: 'Landlord Invite Form',
     classification: 'Work Project',
     url: 'https://www.leapeasy.com/claim-form/',
@@ -161,7 +151,6 @@ const projects: Project[] = [
   },
   {
     id: 10,
-    job: jobs[2], 
     name: 'Veterans to Doctors',
     classification: 'Work Project',
     url: 'https://promenade.ai',

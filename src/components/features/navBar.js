@@ -24,12 +24,6 @@ function NavBar({
     >
       Education
     </div>
-    <div 
-      onClick={() => navigate('/experience')} 
-      className={active === 'experience' ? styles.active : styles.navButton}
-    >
-      Experience
-    </div>
   </div>
   )
 }

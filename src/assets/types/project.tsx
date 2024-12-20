@@ -1,4 +1,3 @@
-import Job from "./job"
 
 interface Project {
   id: Number,
@@ -12,7 +11,6 @@ interface Project {
   apis: String[],
   features: String[],
   description: String,
-  job: Job
 }
 
 export default Project
