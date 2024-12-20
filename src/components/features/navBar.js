@@ -18,17 +18,17 @@ function NavBar({
     >
       Projects
     </div>
+    <div 
+      onClick={() => navigate('/blog')} 
+      className={active === 'blog' ? styles.active : styles.navButton}
+    >
+      Blog
+    </div>
     <div
       onClick={() => navigate('/education')} 
       className={active === 'education' ? styles.active : styles.navButton}
     >
       Education
-    </div>
-    <div 
-      onClick={() => navigate('/experience')} 
-      className={active === 'experience' ? styles.active : styles.navButton}
-    >
-      Experience
     </div>
   </div>
   )

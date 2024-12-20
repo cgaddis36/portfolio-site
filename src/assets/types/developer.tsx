@@ -1,11 +1,11 @@
 interface Developer {
-  id: Number,
-  firstName: String,
-  lastName: String,
-  email: String,
-  github: String,
-  title: String,
-  background: String
+  id: number,
+  firstName: string,
+  lastName: string,
+  email: string,
+  github: string,
+  title: string,
+  background: string
 }
 
 export default Developer

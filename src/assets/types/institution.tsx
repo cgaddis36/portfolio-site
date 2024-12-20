@@ -1,12 +1,12 @@
 interface Institution {
-  id: Number,
-  name: String,
-  degree: String,
-  major: String,
-  graduation: String,
-  city: String,
-  state: String,
-  logo: String
+  id: number,
+  name: string,
+  degree: string,
+  major: string,
+  graduation: string,
+  city: string,
+  state: string,
+  logo: string
 }
 
 export default Institution
